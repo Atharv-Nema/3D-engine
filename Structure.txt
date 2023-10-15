@@ -1,0 +1,61 @@
+Classes:
+
+    Point:
+        Member variables:
+            double x, y, z;
+        Member function:
+            double getX()
+            double getY()
+            double getZ()
+
+            double moveZ()
+            double moveX()
+            //Notice that I haven't added changeY() as we won't be flying
+
+    Cartesian:
+        Member variables:
+            Point origin;
+            double alpha;
+            double beta;
+            int transformation[3][3];
+        
+        Member functions:
+            Point applyTrans(Point p)
+            double moveX()
+            double moveZ()
+            double turnX()
+            double turnY()
+            //Notice that I haven't added moveY() as we won't be flying
+
+    Line:
+        Member variables:
+            Cartesian POV;
+            Point p1,p2; //The end points
+
+        Member functions:
+            Line(Cartesian &POV, Point p1, Point p2)
+            void draw() -> draws the line projected onto screen
+
+    Player:
+        Cartesian POV;//This POV will be passed by reference to every single object that needs it so that changes are reflected
+        
+
+
+    Display:
+        Member variables:
+            vector<Point> vp;
+        Member function:
+            void display(vector<Point> v) -> Displays the projection of Point on the screen
+            def Transform(Point p) -> Applies the matrix transformation and translation on the point
+    
+    Movement:
+        Member variables:
+            Point
+        Member functions
+
+
+    A display class
+        Member function:
+            def display(vector<Point> v) -> Displays the projection of Point on the screen
+            def Transform(Point p) -> Applies the matrix transformation and translation on the Point
+    
