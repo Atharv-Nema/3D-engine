@@ -1,3 +1,6 @@
+Movements ->
+W front, S back, A and D to turn left and right, q to look up, e to look down.
+
 Classes:
 
     Point:
@@ -43,19 +46,12 @@ Classes:
 
     Display:
         Member variables:
-            vector<Point> vp;
+            const int WIDTH;
+            const int HEIGHT;
+            RenderWindow window;
         Member function:
-            void display(vector<Point> v) -> Displays the projection of Point on the screen
-            def Transform(Point p) -> Applies the matrix transformation and translation on the point
-    
-    Movement:
-        Member variables:
-            Point
-        Member functions
+            void drawLines(vector<Line> &LineMaker);
+            void 
 
-
-    A display class
-        Member function:
-            def display(vector<Point> v) -> Displays the projection of Point on the screen
-            def Transform(Point p) -> Applies the matrix transformation and translation on the Point
+          
     
