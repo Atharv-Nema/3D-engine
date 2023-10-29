@@ -23,14 +23,14 @@ Draw :: Draw(int width, int height, double screendist, sf::RenderWindow &win){
 }
 void Draw :: drawLines(vector<Line> &LineVec){
     for(int i = 0; i < LineVec.size(); i++){
-        LineVec[i].update();//Updated here
-        cout << LineVec[i].getP1().getZ() << endl;//Here is the problem. For some reason, the line is not updated here.
+        //LineVec[i].update();//Updated here
+        cout << LineVec[i].get_Rel_P1().getZ() << endl;//Here is the problem. For some reason, the line is not updated here.
         drawLine3D(LineVec[i]);
     }
 }
 void Draw :: drawLine3D(Line l){
-    Point p1 = l.getP1();
-    Point p2 = l.getP2();
+    Point p1 = l.get_Rel_P1();
+    Point p2 = l.get_Rel_P2();
     if(p1.getZ() < SCREENDIST || p2.getZ() < SCREENDIST){
         return;
         //TODO: draw partial line if one is infront of screen and the other is behind the screen

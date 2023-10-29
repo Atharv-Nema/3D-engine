@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 #include <SFML/Graphics.hpp>
 #include "Drawing_tools.cpp"
+#include "Test_Shapes.cpp"
 using namespace std;
 vector<Line> LineMaker(Cartesian &POV){
     int choice = 1;
@@ -24,7 +25,8 @@ vector<Line> LineMaker(Cartesian &POV){
 
 int main(){
     Cartesian POV = Cartesian();
-    vector<Line> LineVec = LineMaker(POV);
+    //vector<Line> LineVec = LineMaker(POV);
+    vector<Line> LineVec = Cube(POV,50,100);
     const int WIDTH = 800;
     const int HEIGHT = 600;
     const double SCREENDIST = 10.0;

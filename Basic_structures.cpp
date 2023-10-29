@@ -140,7 +140,8 @@ class Line{
         Point p1,p2;
     public:
         Line(Cartesian &pov, double x1, double y1, double z1, double x2, double y2, double z2);
-        void update();
+        Point get_Rel_P1();
+        Point get_Rel_P2();
         Point getP1();
         Point getP2();
 };
@@ -150,14 +151,20 @@ Point Line :: getP1(){
 Point Line :: getP2(){
     return p2;
 }
+Point Line :: get_Rel_P1(){
+    return (*POV).applyTransformation(p1);
+}
+Point Line :: get_Rel_P2(){
+    return (*POV).applyTransformation(p2);
+}
 Line :: Line(Cartesian &pov, double x1, double y1, double z1, double x2, double y2, double z2){
     POV = &pov;
     p1 = Point(x1,y1,z1);
     p2 = Point(x2,y2,z2);
 }
-void Line :: update(){
+/*void Line :: update(){
     p1 = (*POV).applyTransformation(p1);
     p2 = (*POV).applyTransformation(p2);
-}
+}*/
 
 
