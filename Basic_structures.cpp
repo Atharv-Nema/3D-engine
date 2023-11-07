@@ -43,7 +43,6 @@ void Point :: changeZ(double Znew){
     z = Znew;
 }
 
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -168,3 +167,4 @@ Line :: Line(Cartesian &pov, double x1, double y1, double z1, double x2, double 
 }*/
 
 
+//I think the uncanniness lies in using a plane. We need to use a sphere

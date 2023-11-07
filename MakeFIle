@@ -1,3 +1,0 @@
-add:
-	g++ trial.cpp -o trial -lsfml-graphics -lsfml-window -lsfml-system
-	//Use ./trial or main to execute the compiled file

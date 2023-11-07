@@ -31,7 +31,7 @@ void Draw :: drawLines(vector<Line> &LineVec){
 void Draw :: drawLine3D(Line l){
     Point p1 = l.get_Rel_P1();
     Point p2 = l.get_Rel_P2();
-    if(p1.getZ() < SCREENDIST || p2.getZ() < SCREENDIST){
+    if(p1.getZ() <= 0 || p2.getZ() <= 0){
         return;
         //TODO: draw partial line if one is infront of screen and the other is behind the screen
     }

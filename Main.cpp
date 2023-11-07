@@ -26,12 +26,16 @@ vector<Line> LineMaker(Cartesian &POV){
 int main(){
     Cartesian POV = Cartesian();
     //vector<Line> LineVec = LineMaker(POV);
-    vector<Line> LineVec = Cube(POV,50,100);
-    const int WIDTH = 800;
-    const int HEIGHT = 600;
-    const double SCREENDIST = 10.0;
-    const double VELOCITY = 0.5;
-    const double ANG_VELOCITY = 0.015; 
+    vector<Line> LineVec = Cube(POV,20,100);
+    vector<Line> LineVec2 = Cube(POV,45,300);
+    for(auto it: LineVec2){
+        LineVec.push_back(it);
+    }
+    const int WIDTH = 80;
+    const int HEIGHT = 60;
+    const double SCREENDIST = 50.0;
+    const double VELOCITY = 1;
+    const double ANG_VELOCITY = 0.01; 
     sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "SFML window");
     window.setSize(sf::Vector2u(WIDTH,HEIGHT));
     //Coordinate topleft is 0,0 however I want coordinate at centre to be 0,0
