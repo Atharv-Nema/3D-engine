@@ -1,8 +1,7 @@
 1. Make sure that you have sfml set up on your device
-2. Run the command g++ Main.cpp -o Main -lsfml-graphics -lsfml-window -lsfml-system to compile Main.cpp
-3. Execute the binary file using ./Main
-4. The initial window may be very small. Make it full screen
-5. W to move forward, S to move back, A and D to turn left and right, Q and E to look up and down.
-6. (Optional). If you don't want the default shape, go to Main.cpp comment line 29 and 30 and uncomment line 28(if
+2. Run the makefile
+3. The initial window may be very small. Make it full screen
+4. W to move forward, S to move back, A and D to turn left and right, Q and E to look up and down.
+5. (Optional). If you don't want the default shape, go to Main.cpp comment line 29 and 30 and uncomment line 28(if
 line numberings are messed up, the line you want to uncomment is the second line in the main method and you
 want to comment the two lines immediately after it).
